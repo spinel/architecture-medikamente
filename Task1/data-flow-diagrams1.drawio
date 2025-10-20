@@ -1,0 +1,184 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7" pages="4">
+  <diagram name="DFD Level 0 - Context" id="context-diagram">
+    <mxGraphModel dx="858" dy="592" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="patient" value="Пациент&#xa;&#xa;• ФИО&#xa;• Дата рождения&#xa;• Телефон&#xa;• Email&#xa;• Адрес&#xa;• Паспорт" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="20" y="430" width="120" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="reception" value="Ресепшен&#xa;&#xa;• Регистрация&#xa;• Записи" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="50" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="doctor" value="Врач&#xa;&#xa;• Диагнозы&#xa;• Назначения" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="20" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cashier" value="Кассир&#xa;&#xa;• Оплата&#xa;• ККМ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="707" y="400" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="laboratory" value="Лаборатория&#xa;&#xa;• Результаты&#xa;• Анализы" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="650" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="main-process" value="Система управления данными&#xa;Медикаменте&#xa;&#xa;❌ БЕЗ ЗАЩИТЫ&#xa;&#xa;• Регистрация пациентов&#xa;• Управление записями&#xa;• Обработка платежей&#xa;• Учет медицинских данных&#xa;• Интеграция с лабораториями" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="250" y="300" width="350" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="excel-files" value="Excel файлы&#xa;&#xa;❌ НЕ ЗАЩИЩЕНЫ&#xa;&#xa;• Patients.xlsx&#xa;• Journal-Doctor-ФИО.xlsx&#xa;• RegistryByDate.xlsx" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="140" y="570" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="file-system" value="Файловая система&#xa;&#xa;❌ НЕ ЗАЩИЩЕНА&#xa;&#xa;• Папки пациентов&#xa;• Сканы документов&#xa;• Медицинские карты" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="580" y="570" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1c-systems" value="1С системы&#xa;&#xa;⚠️ ЧАСТИЧНО ЗАЩИЩЕНЫ&#xa;&#xa;• Бухгалтерия&#xa;• Торговля и склад" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="350" y="650" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="flow1" value="Персональные данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="patient" target="main-process" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2" value="Запрос на запись" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="reception" target="main-process" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow3" value="Медицинские данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="doctor" target="main-process" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4" value="Данные платежей" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="cashier" target="main-process" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow5" value="Результаты анализов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d79b00;strokeWidth=2;" parent="1" source="laboratory" target="main-process" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow6" value="Список пациентов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;" parent="1" source="main-process" target="excel-files" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow7" value="Документы пациентов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;" parent="1" source="main-process" target="file-system" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow8" value="Финансовые данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d6b656;strokeWidth=2;" parent="1" source="main-process" target="1c-systems" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="DFD Level 1 - Patient Registration" id="patient-registration">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- External Entity -->
+        <mxCell id="patient" value="Пациент&#xa;&#xa;• ФИО&#xa;• Дата рождения&#xa;• Телефон&#xa;• Email&#xa;• Адрес&#xa;• Паспорт" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="120" height="140" as="geometry" />
+        </mxCell>
+        <!-- Process -->
+        <mxCell id="registration-process" value="1.0 Регистрация пациента&#xa;&#xa;❌ БЕЗ ЗАЩИТЫ&#xa;&#xa;• Валидация данных&#xa;• Проверка уникальности&#xa;• Создание записи&#xa;• Генерация ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="250" y="320" width="200" height="120" as="geometry" />
+        </mxCell>
+        <!-- Data Stores -->
+        <mxCell id="patients-excel" value="Patients.xlsx&#xa;&#xa;❌ НЕ ЗАЩИЩЕН&#xa;&#xa;• ID пациента&#xa;• ФИО&#xa;• Контакты&#xa;• Адрес&#xa;• Паспорт" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="250" y="500" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="patient-folder" value="Папка пациента&#xa;&#xa;❌ НЕ ЗАЩИЩЕНА&#xa;&#xa;• Документы&#xa;• Сканы&#xa;• Фото&#xa;• Медицинские документы" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="450" y="500" width="150" height="80" as="geometry" />
+        </mxCell>
+        <!-- Data Flows -->
+        <mxCell id="flow1" value="Персональные данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="patient" target="registration-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2" value="Список пациентов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="registration-process" target="patients-excel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow3" value="Документы пациента" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="registration-process" target="patient-folder">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="DFD Level 1 - Payment Processing" id="payment-processing">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- External Entities -->
+        <mxCell id="patient" value="Пациент&#xa;&#xa;• Оплата услуг&#xa;• Способ оплаты&#xa;• Сумма" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cashier" value="Кассир&#xa;&#xa;• Ввод данных&#xa;• Работа с ККМ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="450" width="120" height="80" as="geometry" />
+        </mxCell>
+        <!-- Process -->
+        <mxCell id="payment-process" value="3.0 Обработка платежей&#xa;&#xa;❌ БЕЗ ЗАЩИТЫ&#xa;&#xa;• Валидация платежа&#xa;• Проверка способа оплаты&#xa;• Обработка транзакции&#xa;• Генерация чека" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="250" y="350" width="200" height="120" as="geometry" />
+        </mxCell>
+        <!-- Data Stores -->
+        <mxCell id="kkm" value="ККМ&#xa;&#xa;⚠️ ЧАСТИЧНО ЗАЩИЩЕНА&#xa;&#xa;• Транзакции&#xa;• Чеки&#xa;• Z-отчеты&#xa;• X-отчеты" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="250" y="550" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1c-accounting" value="1С Бухгалтерия&#xa;&#xa;⚠️ ЧАСТИЧНО ЗАЩИЩЕНА&#xa;&#xa;• Счета&#xa;• Платежи&#xa;• Клиенты&#xa;• Налоги" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="550" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="excel-payments" value="Excel файлы&#xa;&#xa;❌ НЕ ЗАЩИЩЕНЫ&#xa;&#xa;• Платежи&#xa;• Отчеты&#xa;• Статистика&#xa;• Сверки" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="550" y="550" width="120" height="80" as="geometry" />
+        </mxCell>
+        <!-- Data Flows -->
+        <mxCell id="flow1" value="Данные платежа" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="patient" target="payment-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2" value="Данные ККМ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="cashier" target="payment-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow3" value="Транзакции" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d6b656;strokeWidth=2;" edge="1" parent="1" source="payment-process" target="kkm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4" value="Финансовые данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d6b656;strokeWidth=2;" edge="1" parent="1" source="payment-process" target="1c-accounting">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow5" value="Дублирование данных" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="cashier" target="excel-payments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="DFD Level 1 - Medical Data Processing" id="medical-data-processing">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- External Entities -->
+        <mxCell id="doctor" value="Врач&#xa;&#xa;• Диагнозы&#xa;• Назначения&#xa;• Заключения&#xa;• Рецепты" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="laboratory" value="Лаборатория&#xa;&#xa;• Результаты анализов&#xa;• Референсные значения&#xa;• Заключения" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="450" width="120" height="100" as="geometry" />
+        </mxCell>
+        <!-- Process -->
+        <mxCell id="medical-process" value="4.0 Управление медицинскими данными&#xa;&#xa;❌ БЕЗ ЗАЩИТЫ&#xa;&#xa;• Валидация мед. данных&#xa;• Проверка прав доступа&#xa;• Сохранение в карту&#xa;• Аудит доступа" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="250" y="350" width="220" height="120" as="geometry" />
+        </mxCell>
+        <!-- Data Stores -->
+        <mxCell id="medical-records" value="Медицинские карты&#xa;&#xa;❌ НЕ ЗАЩИЩЕНЫ&#xa;&#xa;• Диагнозы&#xa;• Назначения&#xa;• История болезни&#xa;• Рецепты" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="250" y="550" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lab-results" value="Результаты анализов&#xa;&#xa;❌ НЕ ЗАЩИЩЕНЫ&#xa;&#xa;• Анализы крови&#xa;• Медицинские изображения&#xa;• Заключения&#xa;• Направления" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="450" y="550" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lab-registry" value="Реестры лаборатории&#xa;&#xa;❌ НЕ ЗАЩИЩЕНЫ&#xa;&#xa;• RegistryByDate&#xa;• Статистика&#xa;• Отчеты" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="350" y="650" width="150" height="80" as="geometry" />
+        </mxCell>
+        <!-- Data Flows -->
+        <mxCell id="flow1" value="Медицинские данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="doctor" target="medical-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2" value="Результаты анализов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="laboratory" target="medical-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow3" value="Медицинские записи" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="medical-process" target="medical-records">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4" value="Лабораторные данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="medical-process" target="lab-results">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow5" value="Реестры" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="laboratory" target="lab-registry">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
